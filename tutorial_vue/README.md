@@ -1,9 +1,3 @@
-# Vue-and-Django-Tutorial
-This GitHub repository was created for myself to learn the basics of Vue and Django. I am following one and only one guide during this tutorial: [Building a Simple CRM Using Django (DRF) And Vue](https://www.youtube.com/playlist?list=PLpyspNLjzwBl-u7Vh8mGfqqRKcVxHzqlp).
-
-My goal, other than learning Vue and Django as well as gain more experience with GitHub and npm, is to take notes in some form so I can remember the process or at least refer back to something quicker in the future.
-
----
 # tutorial_vue
 
 ## Project setup
@@ -32,5 +26,3 @@ npm run build
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
-
-

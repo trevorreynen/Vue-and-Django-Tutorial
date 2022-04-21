@@ -1,0 +1,116 @@
+May or not be deleted later.
+
+Reminder:
+	camelCase | PascalCase | snake_case | UPPER_CASE_WITH_SNAKE_CASE | kebab-case
+
+	Common Conventions:
+		JavaScript:
+			Camel case for variables and methods.
+			Pascal case for types and classes in JavaScript.
+			Upper case snake case for constants.
+
+
+
+Log of EVERY command entered within the Vue-and-Django-Tutorial project folder, related to the project or not, in order.
+
+Thu. 04/21/22, ~8:00-9:00 AM | Laptop
+	npm install -g @vue/cli
+	npm install -g npm@8.7.0
+	vue create tutorial_vue
+	!!!! NOTE: This are the selections made when creating vue. This section stops after next the "!!!!"
+		1. Manually select features
+		2. Babel
+		2. Router
+		2. Vuex
+		2. CSS Pre-processors
+		3. 3.x
+		Use history mode for router? (Requires proper server setup for index fallback in production) (Y/n) 4. Y
+		5. Sass/SCSS (with dart-sass)
+		6. In dedicated config files
+		Save this as a preset for future projects? (y/N) 7. N
+	!!!!
+	cd tutorial_vue
+	npm install bulma
+	npm install bulma-toast
+	npm install axios
+
+	!!!! NOTE: Next commands done after 8:10 in Part 1 video. !!!!
+
+	npm run serve
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
