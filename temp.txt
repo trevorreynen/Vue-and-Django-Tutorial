@@ -13,6 +13,7 @@ Reminder:
 
 Log of EVERY command entered within the Vue-and-Django-Tutorial project folder, related to the project or not, in order.
 
+
 Thu. 04/21/22, ~8:00-9:00 AM | Laptop
 	npm install -g @vue/cli
 	npm install -g npm@8.7.0
@@ -40,19 +41,51 @@ Thu. 04/21/22, ~8:00-9:00 AM | Laptop
 
 
 
+Thu. 04/21/22, ~3:00 PM | PC
+	cd tutorial_vue
+	npm install
+	npm install -g npm@8.7.0
+	npm run serve
+
+	!!!! NOTE: At this point I start Part 2 (second video in tutorial). !!!!
+
+	python -m pip install virtualenv
+	virtualenv tutorial_env
+
+
+	!!!! NOTE: At this point, I am using VS Code terminal within VS Code (CTRL+TILDE (`)) so I can use the virtual environment properly !!!!
+
+	./tutorial_env/Scripts/activate
+
+	pip install django
+	pip install django-rest-framework
+	pip install django-cors-headers
+	pip install djoser
+	django-admin startproject tutorial_django
+
+Taking a break. Will continue later. Stopped at 2.55 of Part 2 video.
 
 
 
+Tue. 05/03/22, ~10:40 PM | PC
+	After pressing CTRL+Tilde while highlighting './tutorial_env/Scripts/activate' from above in line 58, VS opens terminal and types: '& c:/GitHub/Vue-and-Django-Tutorial/tutorial_env/Scripts/Activate.ps1' automatically
 
+	cd tutorial_django
+	python manage.py makemigrations
+	python manage.py migrate
 
+	python manage.py createsuperuser
+		'Username (leave blank to use 'trevor'): ' admin
+		'Email address: ' admin@vuedjangotutorial.com
+		'Password: ' adminTutorialPass
+		'Password (again): ' adminTutorialPass
 
+	python manage.py runserver
 
+Stopped at 12:37 AM. Ran into an error that I cannot figure out yet. Paused video at 23:40 of Part 2. Will continue after a break.
 
-
-
-
-
-
+Wed. 05/04/22, ~4:00 AM | PC
+	The problem I previously ran into was because all mutations in the store's index.js was in the getters section.
 
 
 
