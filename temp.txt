@@ -87,14 +87,29 @@ Stopped at 12:37 AM. Ran into an error that I cannot figure out yet. Paused vide
 Wed. 05/04/22, ~4:00 AM | PC
 	The problem I previously ran into was because all mutations in the store's index.js was in the getters section.
 
+	Part 2 video has now been completed.
+	Part 3 video starts now (4:30 AM-ish).
+
+	TODO List from Part 3 video:
+	-Implement a loading bar
+	-Create a Django app for the leads
+	-Database model for leads
+	-Serializer for the leads
+	-View for the leads
+	-Set up the urls
+	-Create page for showing the leads
+	-Make it possible to add leads
 
 
+	python manage.py startapp lead
 
+Took a break but back at 7:50-ish AM
 
+	python manage.py makemigrations
+	python manage.py migrate
 
-
-
-
+	Quick Note:
+		The account I created for testing is code@code.com and 1235password
 
 
 
