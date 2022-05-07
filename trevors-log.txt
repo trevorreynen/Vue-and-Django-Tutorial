@@ -139,15 +139,25 @@ Sat. 05/07/22, ~3:10 PM | PC
 	- Create page for adding teams
 	- Fix login to implement teams (Vuex)
 
+	With the virtualenv active and in the tutorial_django directory,
+	python manage.py startapp team
+	python manage.py makemigrations
+	python manage.py migrate
+
+	Quick Note: At some point I stopped adding the repeating commands for terminal like starting server for django and npm. So, even though I haven't added those to the log, I still often do that when working on the project.
 
 
+	Taking a break around 6:00 PM. Stopped at 23:30 of Part 5 video. Ran into a problem that may or may not be a problem, I may just need to finish up the part 5 video and it wont be an error. ATM the "error" says,
+		POST http://127.0.0.1:8000/api/v1/teams/ 404 (Not Found)
+		AddTeam.vue?c14a:64 Error: Request failed with status code 404
+			at createError (createError.js?770c:16:1)
+			at settle (settle.js?8768:17:1)
+			at XMLHttpRequest.onloadend (xhr.js?1a5c:66:1)
 
+	Continuing after break, currently 7:20 PM | PC
 
-
-
-
-
-
+	Finished Part 5 around 8:00 PM.
+	Moving on to Part 6 in a few minutes.
 
 
 

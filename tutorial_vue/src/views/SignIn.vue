@@ -2,21 +2,20 @@
     <div class="container">
         <div class="columns">
             <div class="column is-4 is-offset-4">
-
                 <h1 class="title">Sign In</h1>
 
                 <form @submit.prevent="submitForm">
                     <div class="field">
                         <label>Email</label>
                         <div class="control">
-                            <input type="email" name="email" class="input" v-model="username">
+                            <input type="email" name="email" class="input" v-model="username" />
                         </div>
                     </div>
 
                     <div class="field">
                         <label>Password</label>
                         <div class="control">
-                            <input type="password" name="password" class="input" v-model="password">
+                            <input type="password" name="password" class="input" v-model="password" />
                         </div>
                     </div>
 
@@ -70,8 +69,6 @@
                         axios.defaults.headers.common['Authorization'] = 'Token ' + token
 
                         localStorage.setItem('token', token)
-
-                        this.$router.push('/dashboard/my-account')
                     })
                     .catch(error => {
                         if (error.response) {
@@ -81,6 +78,29 @@
                         } else if (error.message) {
                             this.errors.push('Something went wrong. Please try again!')
                         }
+                    })
+
+                await axios
+                    .get('/api/v1/users/me')
+                    .then(response => {
+                        this.$store.commit('setUser', { id: response.data.id, username: response.data.username })
+
+                        localStorage.setItem('username', response.data.username)
+                        localStorage.setItem('userid', response.data.id)
+                    })
+                    .catch(error => {
+                        console.log(error)
+                    })
+
+                await axios
+                    .get('/api/v1/teams/get_my_team')
+                    .then(response => {
+                        this.$store.commit('setTeam', { id: response.data.id, name: response.data.name })
+
+                        this.$router.push('/dashboard/my-account')
+                    })
+                    .catch(error => {
+                        console.log(error)
                     })
 
                 this.$store.commit('setIsLoading', false)

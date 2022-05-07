@@ -24,10 +24,17 @@
         beforeCreate() {
             this.$store.commit('initializeStore')
 
+            //console.log(this.$store.state.user) // Delete later. Displays username.
+            //console.log(this.$store.state.team) // Delete later. Displays team user is in.
+
             if (this.$store.state.token) {
                 axios.defaults.headers.common['Authorization'] = 'Token ' + this.$store.state.token
             } else {
                 axios.defaults.headers.common['Authorization'] = ''
+            }
+
+            if (!this.$store.state.team.id) {
+                this.$router.push('/dashboard/add-team')
             }
         }
     }
