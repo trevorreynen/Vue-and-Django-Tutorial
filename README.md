@@ -48,7 +48,8 @@ The directions below assume all prerequisites are met from Project Tools above. 
 1. First, run the Django server.
    - With VS Code, press **CTRL+Tilde (`~)** and type the following commands into the terminal
       ```
-	  ../GitHub/Vue-and-Django-Tutorial> cd tutorial_django
+      ../GitHub/Vue-and-Django-Tutorial> ./tutorial_env/Scripts/activate
+      ../GitHub/Vue-and-Django-Tutorial> cd tutorial_django
       ../GitHub/Vue-and-Django-Tutorial/tutorial_django> py manage.py runserver
       ```
 2. Next, run the Vue server.

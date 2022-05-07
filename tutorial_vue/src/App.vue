@@ -43,7 +43,7 @@
     }
 
     .lds-dual-ring:after {
-        content: " ";
+        content: ' ';
         display: block;
         width: 64px;
         height: 64px;
