@@ -4,6 +4,7 @@ This GitHub repository was created for myself to learn the basics of Vue and Dja
 My goal, other than learning Vue and Django as well as gain more experience with GitHub and npm, is to take notes in some form so I can remember the process or at least refer back to something quicker in the future.
 
 ---
+
 ## Project Tools
 * [GitHub](https://github.com/)
    * [GitHub Desktop](https://desktop.github.com/) - *Highly Recommended*
@@ -20,6 +21,7 @@ My goal, other than learning Vue and Django as well as gain more experience with
    * [Django REST Framework](https://www.django-rest-framework.org/)
 * [Vue.js (v3) JavaScript Framework](https://v3.vuejs.org/)
 * [Bulma CSS Framework](https://bulma.io/documentation/)
+
 ---
 
 ## Installing Project Dependencies
@@ -38,9 +40,28 @@ The directions below assume all prerequisites are met from Project Tools above. 
 4. With VS Code opened to your project folder, press **CTRL+Tilde (`~)** and type **cd tutorial_vue** and press enter.
 5. Next, run the following in the tutorial_vue directory:
    ```
-    .../GitHub/Vue-and-Django-Tutorial/tutorial_vue> npm install
-    ```
-6. **Steps at this point will be updated later to cover everything.**
+   .../GitHub/Vue-and-Django-Tutorial/tutorial_vue> npm install
+   ```
+6. Next, go back to the parent folder of the project.
+   ```
+   .../GitHub/Vue-and-Django-Tutorial/tutorial_vue> cd ..
+   ```
+7. Install virtualenv for python.
+   ```
+   .../GitHub/Vue-and-Django-Tutorial> python -m pip install virtualenv
+   ```
+8. Create a virtual environment. This is used when running the Django server.
+   ```
+   .../GitHub/Vue-and-Django-Tutorial> virtualenv tutorial_env
+   ```
+   **NOTE:** **tutorial_env** is the environment name. You can rename it to whatever you prefer, but if you want to keep things consistent with everything else just name it tutorial_env.
+9. To install the proper modules/libraries needed for this project, we activate the virtual environment and use the requirements.txt file in the parent project folder.
+   ```
+   .../GitHub/Vue-and-Django-Tutorial> ./tutorial_env/Scripts/activate
+   (tutorial_env) .../GitHub/Vue-and-Django-Tutorial> python -m pip install -r requirements.txt
+   ```
+   **NOTE:** The (tutorial_env) to the left of the directory is how you know you are IN the virtual env. Any commands like pip will be working with the virtual env and not your Python environment, *as long as the virtual env, (tutorial_env), is active*.
+10. **Steps at and beyond this point will be updated later to cover everything.**
 
 ---
 
@@ -49,8 +70,8 @@ The directions below assume all prerequisites are met from Project Tools above. 
    - With VS Code, press **CTRL+Tilde (`~)** and type the following commands into the terminal
       ```
       ../GitHub/Vue-and-Django-Tutorial> ./tutorial_env/Scripts/activate
-      ../GitHub/Vue-and-Django-Tutorial> cd tutorial_django
-      ../GitHub/Vue-and-Django-Tutorial/tutorial_django> py manage.py runserver
+      (tutorial_env) ../GitHub/Vue-and-Django-Tutorial> cd tutorial_django
+      (tutorial_env) ../GitHub/Vue-and-Django-Tutorial/tutorial_django> py manage.py runserver
       ```
 2. Next, run the Vue server.
    - With VS Code and the terminal window opened, press the + symbol in the top right of the terminal window to open another terminal. This is useful because you can't do anything in the previous terminal after running the server.
@@ -61,11 +82,13 @@ The directions below assume all prerequisites are met from Project Tools above. 
 	  ```
 
 Quick Notes:
-- With the Django development server running:
-  - Access the Django admin GUI by navigating to http://127.0.0.1:8000/admin.
-- A URL to the Vue.js app (http://localhost:8080) will be displayed in the terminal.
+   - With the Django development server running:
+      - Access the Django admin GUI by navigating to http://127.0.0.1:8000/admin.
+   - A URL to the Vue.js app (http://localhost:8080) will be displayed in the terminal.
 
 ---
+
+## Other
 
 ### Compiles and minifies for production
 ```
