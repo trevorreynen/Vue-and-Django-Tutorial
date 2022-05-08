@@ -24,9 +24,6 @@
         beforeCreate() {
             this.$store.commit('initializeStore')
 
-            //console.log(this.$store.state.user) // Delete later. Displays username.
-            //console.log(this.$store.state.team) // Delete later. Displays team user is in.
-
             if (this.$store.state.token) {
                 axios.defaults.headers.common['Authorization'] = 'Token ' + this.$store.state.token
             } else {
@@ -62,12 +59,8 @@
     }
 
     @keyframes lds-dual-ring {
-        0% {
-            transform: rotate(0deg);
-        }
-        100% {
-            transform: rotate(360deg);
-        }
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
     }
 
     .is-loading-bar {

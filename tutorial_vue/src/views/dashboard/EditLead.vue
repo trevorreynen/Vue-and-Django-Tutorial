@@ -9,13 +9,15 @@
                 <form @submit.prevent="submitForm">
                     <div class="field">
                         <label>Company</label>
+
                         <div class="control">
                             <input type="text" class="input" v-model="lead.company" />
                         </div>
                     </div>
 
                     <div class="field">
-                        <label>Contact person</label>
+                        <label>Contact Person</label>
+
                         <div class="control">
                             <input type="text" class="input" v-model="lead.contact_person" />
                         </div>
@@ -23,6 +25,7 @@
 
                     <div class="field">
                         <label>Email</label>
+
                         <div class="control">
                             <input type="email" class="input" v-model="lead.email" />
                         </div>
@@ -30,6 +33,7 @@
 
                     <div class="field">
                         <label>Phone</label>
+
                         <div class="control">
                             <input type="text" class="input" v-model="lead.phone" />
                         </div>
@@ -37,6 +41,7 @@
 
                     <div class="field">
                         <label>Website</label>
+
                         <div class="control">
                             <input type="text" class="input" v-model="lead.website" />
                         </div>
@@ -44,13 +49,15 @@
 
                     <div class="field">
                         <label>Confidence</label>
+
                         <div class="control">
                             <input type="number" class="input" v-model="lead.confidence" />
                         </div>
                     </div>
 
                     <div class="field">
-                        <label>Estimated value</label>
+                        <label>Estimated Value</label>
+
                         <div class="control">
                             <input type="number" class="input" v-model="lead.estimated_value" />
                         </div>
@@ -58,8 +65,10 @@
 
                     <div class="field">
                         <label>Status</label>
+
                         <div class="control">
                             <div class="select">
+
                                 <select v-model="lead.status">
                                     <option value="new">New</option>
                                     <option value="contacted">Contacted</option>
@@ -67,31 +76,38 @@
                                     <option value="lost">Lost</option>
                                     <option value="won">Won</option>
                                 </select>
+
                             </div>
                         </div>
                     </div>
 
                     <div class="field">
                         <label>Priority</label>
+
                         <div class="control">
                             <div class="select">
+
                                 <select v-model="lead.priority">
                                     <option value="low">Low</option>
                                     <option value="medium">Medium</option>
                                     <option value="high">High</option>
                                 </select>
+
                             </div>
                         </div>
                     </div>
 
                     <div class="field">
                         <label>Assigned To</label>
+
                         <div class="control">
                             <div class="select">
+
                                 <select v-model="lead.assigned_to">
                                     <option value="" selected>Select Member</option>
                                     <option v-for="member in team.members" v-bind:key="member.id" v-bind:value="member.id">{{ member.username }}</option>
                                 </select>
+
                             </div>
                         </div>
                     </div>
@@ -109,7 +125,7 @@
 
 <script>
     import axios from 'axios'
-    import {toast} from 'bulma-toast'
+    import { toast } from 'bulma-toast'
 
     export default {
         name: 'EditLead',
@@ -131,7 +147,7 @@
 
                 const leadID = this.$route.params.id
 
-                axios
+                await axios
                     .get(`/api/v1/leads/${leadID}/`)
                     .then((response) => {
                         this.lead = response.data
@@ -147,7 +163,7 @@
 
                 const leadID = this.$route.params.id
 
-                axios
+                await axios
                     .patch(`/api/v1/leads/${leadID}/`, this.lead)
                     .then((response) => {
                         toast({
@@ -172,10 +188,10 @@
 
                 await axios
                     .get('/api/v1/teams/get_my_team')
-                    .then(response => {
+                    .then((response) => {
                         this.team = response.data
                     })
-                    .catch(error => {
+                    .catch((error) => {
                         console.log(error)
                     })
 

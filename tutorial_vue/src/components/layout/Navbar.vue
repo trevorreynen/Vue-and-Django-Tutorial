@@ -1,5 +1,6 @@
 <template>
     <nav class="navbar is-dark">
+
         <div class="navbar-brand">
             <router-link to="/" class="navbar-item">
                 <strong>Vue and Django Tutorial</strong>
@@ -7,9 +8,11 @@
         </div>
 
         <div class="navbar-menu">
-            <div class="navbar-end">
-                <router-link to="/dashboard/leads" class="navbar-item">Leads</router-link>
 
+            <div class="navbar-end">
+
+                <router-link to="/dashboard/leads" class="navbar-item">Leads</router-link>
+                <router-link to="/dashboard/clients" class="navbar-item">Clients</router-link>
                 <router-link to="/dashboard/team" class="navbar-item">Team</router-link>
 
                 <div class="navbar-item">
@@ -24,8 +27,11 @@
                         </template>
                     </div>
                 </div>
+
             </div>
+
         </div>
+
     </nav>
 </template>
 

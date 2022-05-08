@@ -4,21 +4,20 @@
             <div class="column is-12">
                 <h1 class="title">{{ lead.company }}</h1>
 
-                <router-link :to="{ name: 'EditLead', params: { lead: lead.id }}" class="button is-light">Edit</router-link>
+                <router-link :to="{ name: 'EditLead', params: { lead: lead.id } }" class="button is-light">Edit</router-link>
             </div>
 
             <div class="column is-6">
                 <div class="box">
                     <h2 class="subtitle">Details</h2>
-                    <template v-if="lead.assigned_to">
-                        <p><strong>Assigned To: </strong>{{ lead.assigned_to.username }}</p>
-                    </template>
+
+                    <template v-if="lead.assigned_to"><p><strong>Assigned To: </strong>{{ lead.assigned_to.username }}</p></template>
                     <p><strong>Status: </strong>{{ lead.status }}</p>
                     <p><strong>Priority: </strong>{{ lead.priority }}</p>
                     <p><strong>Confidence: </strong>{{ lead.confidence }}</p>
-                    <p><strong>Estimated value: </strong>{{ lead.estimated_value }}</p>
-                    <p><strong>Created at: </strong>{{ lead.created_at }}</p>
-                    <p><strong>Modified at: </strong>{{ lead.modified_at }}</p>
+                    <p><strong>Estimated Value: </strong>{{ lead.estimated_value }}</p>
+                    <p><strong>Created At: </strong>{{ lead.created_at }}</p>
+                    <p><strong>Modified At: </strong>{{ lead.modified_at }}</p>
                 </div>
             </div>
 
@@ -26,7 +25,7 @@
                 <div class="box">
                     <h2 class="subtitle">Contact Information</h2>
 
-                    <p><strong>Contact person: </strong>{{ lead.contact_person }}</p>
+                    <p><strong>Contact Person: </strong>{{ lead.contact_person }}</p>
                     <p><strong>Email: </strong>{{ lead.email }}</p>
                     <p><strong>Phone: </strong>{{ lead.phone }}</p>
                     <p><strong>Website: </strong>{{ lead.website }}</p>
@@ -55,12 +54,12 @@
 
                 const leadID = this.$route.params.id
 
-                axios
+                await axios
                     .get(`/api/v1/leads/${leadID}/`)
-                    .then(response => {
+                    .then((response) => {
                         this.lead = response.data
                     })
-                    .catch(error => {
+                    .catch((error) => {
                         console.log(error)
                     })
 

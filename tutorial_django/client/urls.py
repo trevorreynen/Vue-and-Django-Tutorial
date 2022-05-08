@@ -1,10 +1,10 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .views import LeadViewSet
+from .views import ClientViewSet
 
 
 router = DefaultRouter()
-router.register('leads', LeadViewSet, basename='leads')
+router.register('clients', ClientViewSet, basename='clients')
 
 
 urlpatterns = [

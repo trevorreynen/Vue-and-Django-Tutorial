@@ -207,8 +207,7 @@ Will continue onwards to Part 8 tomorrow.
 
 
 
-
-
+Sun. 05/08/22, 12:20 PM | PC
 
     TODO List for Part 8:
     - Show list of clients
@@ -230,13 +229,23 @@ Will continue onwards to Part 8 tomorrow.
         - Get client from server
         - Send updates to server
 
+    python manage.py startapp client
+    python manage.py makemigrations
+    python manage.py migrate
 
 
+    GitIgnore Info (Documentation/Notes)
+        doc/frotz/  ==  doc/frotz
+        doc/frotz   !=  a/doc/frotz
+        frotz/  ==  frotz  &&  a/frotz
 
+        Two consecutive asterisks ("**") in patterns matched against full pathname may have special meaning:
+            A trailing "/**" matches everything inside. For example, "abc/**" matches all files inside directory "abc", relative to the location of the .gitignore file, with infinite depth.
 
+            A slash followed by two consecutive asterisks then a slash matches zero or more directories. For example, "a/**/b" matches "a/b", "a/x/b", "a/x/y/b" and so on.
 
-
-
+    Forgot to add to log, finished part 8 around 3:30 PM.
+    Going to start Part 9 in a few minutes.
 
 
 

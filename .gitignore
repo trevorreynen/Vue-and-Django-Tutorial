@@ -3,16 +3,19 @@
 .prettierrc
 *lnk
 
+tutorial_django/**/__pycache__/
 tutorial_django/*.pyc
 tutorial_django/*/*.pyc
 tutorial_django/*/*/*.pyc
 tutorial_django/*/*/*/*.pyc
+tutorial_django/*/*/*/*/*.pyc
 
 tutorial_vue/.DS_Store
 tutorial_vue/node_modules
 /dist
 
 # local env files
+tutorial_env/
 tutorial_vue/.env.local
 tutorial_vue/.env.*.local
 
@@ -23,8 +26,6 @@ tutorial_vue/yarn-error.log*
 tutorial_vue/pnpm-debug.log*
 
 # Editor directories and files
-tutorial_vue/.idea
-tutorial_vue/.vscode
 tutorial_vue/*.suo
 tutorial_vue/*.ntvs*
 tutorial_vue/*.njsproj

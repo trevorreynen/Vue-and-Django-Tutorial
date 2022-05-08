@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User
 from django.db import models
-
 from team.models import Team
+
 
 class Lead(models.Model):
     NEW = 'new'
@@ -42,3 +42,4 @@ class Lead(models.Model):
     created_by = models.ForeignKey(User, related_name='leads', on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     modified_at = models.DateTimeField(auto_now=True)
+

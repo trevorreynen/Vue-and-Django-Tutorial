@@ -5,7 +5,7 @@
                 <h1 class="title">{{ team.name }}</h1>
 
                 <template v-if="team.created_by.id === parseInt($store.state.user.id)">
-                    <router-link :to="{'name': 'AddMember'}" class="button is-primary">Add Member</router-link>
+                    <router-link :to="{ name: 'AddMember' }" class="button is-primary">Add Member</router-link>
                 </template>
             </div>
 
@@ -18,12 +18,14 @@
                             <th>Name</th>
                         </tr>
                     </thead>
+
                     <tbody>
                         <tr v-for="member in team.members" v-bind:key="member.id">
                             <td>{{ member.username }}</td>
                         </tr>
                     </tbody>
                 </table>
+
             </div>
         </div>
     </div>
@@ -51,10 +53,10 @@
 
                 await axios
                     .get('/api/v1/teams/get_my_team')
-                    .then(response => {
+                    .then((response) => {
                         this.team = response.data
                     })
-                    .catch(error => {
+                    .catch((error) => {
                         console.log(error)
                     })
 

@@ -8,11 +8,12 @@
             </div>
 
             <div class="column is-12">
+
                 <table class="table is-fullwidth">
                     <thead>
                         <tr>
                             <th>Company</th>
-                            <th>Contact person</th>
+                            <th>Contact Person</th>
                             <th>Assigned To</th>
                             <th>Status</th>
                             <th></th>
@@ -25,12 +26,11 @@
                             <td>{{ lead.contact_person }}</td>
                             <td><template v-if="lead.assigned_to">{{ lead.assigned_to.username }}</template></td>
                             <td>{{ lead.status }}</td>
-                            <td>
-                                <router-link :to="{ name: 'Lead', params: { id: lead.id }}">Details</router-link>
-                            </td>
+                            <td><router-link :to="{ name: 'Lead', params: { id: lead.id } }">Details</router-link></td>
                         </tr>
                     </tbody>
                 </table>
+
             </div>
         </div>
     </div>
@@ -53,7 +53,7 @@
             async getLeads() {
                 this.$store.commit('setIsLoading', true)
 
-                axios
+                await axios
                     .get('/api/v1/leads/')
                     .then((response) => {
                         this.leads = response.data

@@ -3,12 +3,13 @@
         <div class="columns is-multiline">
             <div class="column is-12">
                 <h1 class="title">Add Team</h1>
-			</div>
+            </div>
 
-			<div class="column is-12">
+            <div class="column is-12">
                 <form @submit.prevent="submitForm">
                     <div class="field">
                         <label>Team Name</label>
+
                         <div class="control">
                             <input type="text" class="input" v-model="name" />
                         </div>
@@ -21,32 +22,32 @@
                     </div>
                 </form>
             </div>
-		</div>
-	</div>
+        </div>
+    </div>
 </template>
 
 <script>
-	import axios from 'axios'
-	import {toast} from 'bulma-toast'
+    import axios from 'axios'
+    import { toast } from 'bulma-toast'
 
-	export default {
-		name: 'AddTeam',
-		data() {
-			return {
-				name: ''
-			}
-		},
-		methods: {
-			async submitForm() {
-				this.$store.commit('setIsLoading', true)
+    export default {
+        name: 'AddTeam',
+        data() {
+            return {
+                name: ''
+            }
+        },
+        methods: {
+            async submitForm() {
+                this.$store.commit('setIsLoading', true)
 
-				const team = {
-					name: this.name
-				}
+                const team = {
+                    name: this.name
+                }
 
-				await axios
-					.post('/api/v1/teams/', team)
-					.then((response) => {
+                await axios
+                    .post('/api/v1/teams/', team)
+                    .then((response) => {
                         toast({
                             message: 'The team was added',
                             type: 'is-success',
@@ -56,7 +57,7 @@
                             position: 'bottom-right'
                         })
 
-						this.$store.commit('setTeam', { id: response.data.id, name: this.name })
+                        this.$store.commit('setTeam', { id: response.data.id, name: this.name })
 
                         this.$router.push('/dashboard')
                     })
@@ -64,8 +65,8 @@
                         console.log(error)
                     })
 
-				this.$store.commit('setIsLoading', false)
-			}
-		}
-	}
+                this.$store.commit('setIsLoading', false)
+            }
+        }
+    }
 </script>

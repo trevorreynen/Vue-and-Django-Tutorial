@@ -2,16 +2,16 @@
     <div class="container">
         <div class="columns is-multiline">
             <div class="column is-12">
-                <h1 class="title">Add Lead</h1>
+                <h1 class="title">Add Client</h1>
             </div>
 
             <div class="column is-12">
                 <form @submit.prevent="submitForm">
                     <div class="field">
-                        <label>Company</label>
+                        <label>Name</label>
 
                         <div class="control">
-                            <input type="text" class="input" v-model="company" />
+                            <input type="text" class="input" v-model="name" />
                         </div>
                     </div>
 
@@ -48,52 +48,6 @@
                     </div>
 
                     <div class="field">
-                        <label>Confidence</label>
-
-                        <div class="control">
-                            <input type="number" class="input" v-model="confidence" />
-                        </div>
-                    </div>
-
-                    <div class="field">
-                        <label>Estimated Value</label>
-
-                        <div class="control">
-                            <input type="number" class="input" v-model="estimated_value" />
-                        </div>
-                    </div>
-
-                    <div class="field">
-                        <label>Status</label>
-
-                        <div class="control">
-                            <div class="select">
-                                <select v-model="status">
-                                    <option value="new">New</option>
-                                    <option value="contacted">Contacted</option>
-                                    <option value="inprogress">In Progress</option>
-                                    <option value="lost">Lost</option>
-                                    <option value="won">Won</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="field">
-                        <label>Priority</label>
-
-                        <div class="control">
-                            <div class="select">
-                                <select v-model="priority">
-                                    <option value="low">Low</option>
-                                    <option value="medium">Medium</option>
-                                    <option value="high">High</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="field">
                         <div class="control">
                             <button class="button is-success">Submit</button>
                         </div>
@@ -109,41 +63,33 @@
     import { toast } from 'bulma-toast'
 
     export default {
-        name: 'AddLead',
+        name: 'AddClient',
         data() {
             return {
-                company: '',
+                name: '',
                 contact_person: '',
                 email: '',
                 phone: '',
-                website: '',
-                confidence: 0,
-                estimated_value: 0,
-                status: 'new',
-                priority: 'medium'
+                website: ''
             }
         },
         methods: {
             async submitForm() {
                 this.$store.commit('setIsLoading', true)
 
-                const lead = {
-                    company: this.company,
+                const client = {
+                    name: this.name,
                     contact_person: this.contact_person,
                     email: this.email,
                     phone: this.phone,
-                    website: this.website,
-                    confidence: this.confidence,
-                    estimated_value: this.estimated_value,
-                    status: this.status,
-                    priority: this.priority
+                    website: this.website
                 }
 
                 await axios
-                    .post('/api/v1/leads/', lead)
+                    .post('/api/v1/clients/', client)
                     .then((response) => {
                         toast({
-                            message: 'The lead was added',
+                            message: 'The client was added',
                             type: 'is-success',
                             dismissible: true,
                             pauseOnHover: true,
@@ -151,7 +97,7 @@
                             position: 'bottom-right'
                         })
 
-                        this.$router.push('/dashboard/leads')
+                        this.$router.push('/dashboard/clients')
                     })
                     .catch((error) => {
                         console.log(error)

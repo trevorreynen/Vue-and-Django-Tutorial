@@ -21,10 +21,10 @@
             async signout() {
                 await axios
                     .post('/api/v1/token/signout/')
-                    .then(response => {
+                    .then((response) => {
                         console.log('Signed out')
                     })
-                    .catch(error => {
+                    .catch((error) => {
                         console.log(JSON.stringify(error))
                     })
 

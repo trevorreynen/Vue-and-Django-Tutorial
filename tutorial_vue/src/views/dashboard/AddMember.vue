@@ -9,22 +9,25 @@
                 <form @submit.prevent="submitForm">
                     <div class="field">
                         <label>Email</label>
+
                         <div class="control">
-                            <input type="email" name="email" class="input" v-model="username">
+                            <input type="email" name="email" class="input" v-model="username" />
                         </div>
                     </div>
 
                     <div class="field">
                         <label>Password</label>
+
                         <div class="control">
-                            <input type="password" name="password1" class="input" v-model="password1">
+                            <input type="password" name="password1" class="input" v-model="password1" />
                         </div>
                     </div>
 
                     <div class="field">
                         <label>Repeat Password</label>
+
                         <div class="control">
-                            <input type="password" name="password2" class="input" v-model="password2">
+                            <input type="password" name="password2" class="input" v-model="password2" />
                         </div>
                     </div>
 
@@ -45,7 +48,7 @@
 
 <script>
     import axios from 'axios'
-    import {toast} from 'bulma-toast'
+    import { toast } from 'bulma-toast'
 
     export default {
         name: 'AddMember',
@@ -83,7 +86,7 @@
 
                     await axios
                         .post('/api/v1/users/', formData)
-                        .then(response => {
+                        .then((response) => {
                             toast({
                                 message: 'The member was added.',
                                 type: 'is-success',
@@ -93,14 +96,14 @@
                                 position: 'bottom-right'
                             })
 
-                            const emailData = {'email': this.username}
+                            const emailData = { email: this.username }
 
                             axios
                                 .post('/api/v1/teams/add_member/', emailData)
-                                .then(response => {
-                                    this.$router.push({'name': 'Team'})
+                                .then((response) => {
+                                    this.$router.push({ name: 'Team' })
                                 })
-                                .catch(error => {
+                                .catch((error) => {
                                     if (error.response) {
                                         for (const property in error.response.data) {
                                             this.errors.push(`${property}: ${error.response.data[property]}`)
@@ -109,9 +112,8 @@
                                         this.errors.push('Something went wrong. Please try again!')
                                     }
                                 })
-
                         })
-                        .catch(error => {
+                        .catch((error) => {
                             if (error.response) {
                                 for (const property in error.response.data) {
                                     this.errors.push(`${property}: ${error.response.data[property]}`)
