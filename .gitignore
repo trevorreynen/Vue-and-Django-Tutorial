@@ -3,6 +3,8 @@
 .prettierrc
 *lnk
 
+*.pyc
+
 tutorial_django/**/__pycache__/
 tutorial_django/*.pyc
 tutorial_django/*/*.pyc
@@ -31,4 +33,5 @@ tutorial_vue/*.ntvs*
 tutorial_vue/*.njsproj
 tutorial_vue/*.sln
 tutorial_vue/*.sw?
+
 
