@@ -1,13 +1,13 @@
 May or not be deleted later.
 
 Reminder:
-	camelCase | PascalCase | snake_case | UPPER_CASE_WITH_SNAKE_CASE | kebab-case
+    camelCase | PascalCase | snake_case | UPPER_CASE_WITH_SNAKE_CASE | kebab-case
 
-	Common Conventions:
-		JavaScript:
-			Camel case for variables and methods.
-			Pascal case for types and classes in JavaScript.
-			Upper case snake case for constants.
+    Common Conventions:
+        JavaScript:
+            Camel case for variables and methods.
+            Pascal case for types and classes in JavaScript.
+            Upper case snake case for constants.
 
 
 
@@ -15,158 +15,220 @@ Log of EVERY command entered within the Vue-and-Django-Tutorial project folder, 
 
 
 Thu. 04/21/22, ~8:00-9:00 AM | Laptop
-	npm install -g @vue/cli
-	npm install -g npm@8.7.0
-	vue create tutorial_vue
-	!!!! NOTE: This are the selections made when creating vue. This section stops after next the "!!!!"
-		1. Manually select features
-		2. Babel
-		2. Router
-		2. Vuex
-		2. CSS Pre-processors
-		3. 3.x
-		Use history mode for router? (Requires proper server setup for index fallback in production) (Y/n) 4. Y
-		5. Sass/SCSS (with dart-sass)
-		6. In dedicated config files
-		Save this as a preset for future projects? (y/N) 7. N
-	!!!!
-	cd tutorial_vue
-	npm install bulma
-	npm install bulma-toast
-	npm install axios
+    npm install -g @vue/cli
+    npm install -g npm@8.7.0
+    vue create tutorial_vue
+    !!!! NOTE: This are the selections made when creating vue. This section stops after next the "!!!!"
+        1. Manually select features
+        2. Babel
+        2. Router
+        2. Vuex
+        2. CSS Pre-processors
+        3. 3.x
+        Use history mode for router? (Requires proper server setup for index fallback in production) (Y/n) 4. Y
+        5. Sass/SCSS (with dart-sass)
+        6. In dedicated config files
+        Save this as a preset for future projects? (y/N) 7. N
+    !!!!
+    cd tutorial_vue
+    npm install bulma
+    npm install bulma-toast
+    npm install axios
 
-	!!!! NOTE: Next commands done after 8:10 in Part 1 video. !!!!
+    !!!! NOTE: Next commands done after 8:10 in Part 1 video. !!!!
 
-	npm run serve
+    npm run serve
 
 
 
 Thu. 04/21/22, ~3:00 PM | PC
-	cd tutorial_vue
-	npm install
-	npm install -g npm@8.7.0
-	npm run serve
+    cd tutorial_vue
+    npm install
+    npm install -g npm@8.7.0
+    npm run serve
 
-	!!!! NOTE: At this point I start Part 2 (second video in tutorial). !!!!
+    !!!! NOTE: At this point I start Part 2 (second video in tutorial). !!!!
 
-	python -m pip install virtualenv
-	virtualenv tutorial_env
+    python -m pip install virtualenv
+    virtualenv tutorial_env
 
 
-	!!!! NOTE: At this point, I am using VS Code terminal within VS Code (CTRL+TILDE (`)) so I can use the virtual environment properly !!!!
+    !!!! NOTE: At this point, I am using VS Code terminal within VS Code (CTRL+TILDE (`)) so I can use the virtual environment properly !!!!
 
-	./tutorial_env/Scripts/activate
+    ./tutorial_env/Scripts/activate
 
-	pip install django
-	pip install django-rest-framework
-	pip install django-cors-headers
-	pip install djoser
-	django-admin startproject tutorial_django
+    pip install django
+    pip install django-rest-framework
+    pip install django-cors-headers
+    pip install djoser
+    django-admin startproject tutorial_django
 
 Taking a break. Will continue later. Stopped at 2.55 of Part 2 video.
 
 
 
 Tue. 05/03/22, ~10:40 PM | PC
-	After pressing CTRL+Tilde while highlighting './tutorial_env/Scripts/activate' from above in line 58, VS opens terminal and types: '& c:/GitHub/Vue-and-Django-Tutorial/tutorial_env/Scripts/Activate.ps1' automatically
+    After pressing CTRL+Tilde while highlighting './tutorial_env/Scripts/activate' from above in line 58, VS opens terminal and types: '& c:/GitHub/Vue-and-Django-Tutorial/tutorial_env/Scripts/Activate.ps1' automatically
 
-	cd tutorial_django
-	python manage.py makemigrations
-	python manage.py migrate
+    cd tutorial_django
+    python manage.py makemigrations
+    python manage.py migrate
 
-	python manage.py createsuperuser
-		'Username (leave blank to use 'trevor'): ' admin
-		'Email address: ' admin@vuedjangotutorial.com
-		'Password: ' adminTutorialPass
-		'Password (again): ' adminTutorialPass
+    python manage.py createsuperuser
+        'Username (leave blank to use 'trevor'): ' admin
+        'Email address: ' admin@vuedjangotutorial.com
+        'Password: ' adminTutorialPass
+        'Password (again): ' adminTutorialPass
 
-	python manage.py runserver
+    python manage.py runserver
 
 Stopped at 12:37 AM. Ran into an error that I cannot figure out yet. Paused video at 23:40 of Part 2. Will continue after a break.
 
 
 
 Wed. 05/04/22, ~4:00 AM | PC
-	The problem I previously ran into was because all mutations in the store's index.js was in the getters section.
+    The problem I previously ran into was because all mutations in the store's index.js was in the getters section.
 
-	Part 2 video has now been completed.
-	Part 3 video starts now (4:30 AM-ish).
+    Part 2 video has now been completed.
+    Part 3 video starts now (4:30 AM-ish).
 
-	TODO List from Part 3 video:
-	-Implement a loading bar
-	-Create a Django app for the leads
-	-Database model for leads
-	-Serializer for the leads
-	-View for the leads
-	-Set up the urls
-	-Create page for showing the leads
-	-Make it possible to add leads
+    TODO List from Part 3 video:
+    -Implement a loading bar
+    -Create a Django app for the leads
+    -Database model for leads
+    -Serializer for the leads
+    -View for the leads
+    -Set up the urls
+    -Create page for showing the leads
+    -Make it possible to add leads
 
-	python manage.py startapp lead
+    python manage.py startapp lead
 
 Took a break but back at 7:50-ish AM
 
-	python manage.py makemigrations
-	python manage.py migrate
+    python manage.py makemigrations
+    python manage.py migrate
 
-	Quick Note:
-		The account I created for testing is code@code.com and 1235password
+    Quick Note:
+        The account I created for testing is code@code.com and 1235password
 
 
 
 Sat. 05/07/22, ~3:10 PM | PC
-	Today I begin working on Part 4
-	TODO List from Part 4 video:
-	- Add leads link in the menu
-	- Hide sign up / log in buttons when authenticated
-	- Make it possible to view a lead
-	- Make it possible to edit a lead
-	- Show toast when saving leads
-	- Show toast when adding leads
+    Today I begin working on Part 4
+    TODO List from Part 4 video:
+    - Add leads link in the menu
+    - Hide sign up / log in buttons when authenticated
+    - Make it possible to view a lead
+    - Make it possible to edit a lead
+    - Show toast when saving leads
+    - Show toast when adding leads
 
-	Done with Part 4 at ~4:35 PM. Ran into a problem that differs from the Part 4 video.
-		My problem was that after I clicked the details button for a lead in the leads table, the page wouldn't show up. The console noted something similar to "missing required param 'id'". After looking at the comments, one comment specifically by Essam AbdElHam mentioned having the same problem.
-		The solution that worked for me was in a reply to the comment I just mentioned, saying "I tried to replace { id: lead.id } with  { lead: lead.id } and everything worked fine for me." I also did that, changing { id: lead.id } to { lead: lead.id } in Lead.vue and Leads.vue. That fixed the problem. I mention this here because as the person who noted the fix said, I also don't quite understand how this fixed the problem and if it's correct or not. So for future reference these two paragraphs are here just in case.
-
-
-	Starting Part 5 at ~5:15 PM
-	TODO List from Part 5 video:
-	- Create Django app and model
-	- Create Serializer and View
-	- Store your user info in Vuex
-	- Add team-id and name to Vuex
-	- If you don't have team, send to create team page
-	- Create page for adding teams
-	- Fix login to implement teams (Vuex)
-
-	With the virtualenv active and in the tutorial_django directory,
-	python manage.py startapp team
-	python manage.py makemigrations
-	python manage.py migrate
-
-	Quick Note: At some point I stopped adding the repeating commands for terminal like starting server for django and npm. So, even though I haven't added those to the log, I still often do that when working on the project.
+Done with Part 4 at ~4:35 PM. Ran into a problem that differs from the Part 4 video.
+        My problem was that after I clicked the details button for a lead in the leads table, the page wouldn't show up. The console noted something similar to "missing required param 'id'". After looking at the comments, one comment specifically by Essam AbdElHam mentioned having the same problem.
+        The solution that worked for me was in a reply to the comment I just mentioned, saying "I tried to replace { id: lead.id } with  { lead: lead.id } and everything worked fine for me." I also did that, changing { id: lead.id } to { lead: lead.id } in Lead.vue and Leads.vue. That fixed the problem. I mention this here because as the person who noted the fix said, I also don't quite understand how this fixed the problem and if it's correct or not. So for future reference these two paragraphs are here just in case.
 
 
-	Taking a break around 6:00 PM. Stopped at 23:30 of Part 5 video. Ran into a problem that may or may not be a problem, I may just need to finish up the part 5 video and it wont be an error. ATM the "error" says,
-		POST http://127.0.0.1:8000/api/v1/teams/ 404 (Not Found)
-		AddTeam.vue?c14a:64 Error: Request failed with status code 404
-			at createError (createError.js?770c:16:1)
-			at settle (settle.js?8768:17:1)
-			at XMLHttpRequest.onloadend (xhr.js?1a5c:66:1)
+Starting Part 5 at ~5:15 PM
+    TODO List from Part 5 video:
+    - Create Django app and model
+- Create Serializer and View
+- Store your user info in Vuex
+- Add team-id and name to Vuex
+- If you don't have team, send to create team page
+- Create page for adding teams
+- Fix login to implement teams (Vuex)
 
-	Continuing after break, currently 7:20 PM | PC
+    With the virtualenv active and in the tutorial_django directory,
+    python manage.py startapp team
+    python manage.py makemigrations
+    python manage.py migrate
 
-	Finished Part 5 around 8:00 PM.
-	Moving on to Part 6 in a few minutes.
-
-
-
-
-
-
-
+    Quick Note: At some point I stopped adding the repeating commands for terminal like starting server for django and npm. So, even though I haven't added those to the log, I still often do that when working on the project.
 
 
+    Taking a break around 6:00 PM. Stopped at 23:30 of Part 5 video. Ran into a problem that may or may not be a problem, I may just need to finish up the part 5 video and it wont be an error. ATM the "error" says,
+        POST http://127.0.0.1:8000/api/v1/teams/ 404 (Not Found)
+        AddTeam.vue?c14a:64 Error: Request failed with status code 404
+            at createError (createError.js?770c:16:1)
+            at settle (settle.js?8768:17:1)
+            at XMLHttpRequest.onloadend (xhr.js?1a5c:66:1)
+
+
+Continuing after break, currently 7:20 PM | PC
+
+Finished Part 5 around 8:00 PM.
+Moving on to Part 6 in a few minutes.
+
+    TODO List for Part 6:
+    - Update the lead model
+    - Make it possible to add members
+        - Update the views.py in the team app
+        - Update the serializer.py
+        - New page for team
+        - Make it possible to add members
+
+
+    python manage.py makemigrations
+        It is impossible to add a non-nullable field 'team' to lead without specifying a default. This is because the database needs something to populate existing rows.
+        Please select a fix:
+        1) Provide a one-off default now (will be set on all existing rows with a null value for this column)
+        2) Quit and manually define a default value in models.py.
+        Select an option:
+        "1"
+        Please enter the default value as valid Python.
+        The datetime and django.utils.timezone modules are available, so it is possible to provide e.g. timezone.now as a value.
+        Type 'exit' to exit this prompt
+        >>> "1"
+        Migrations for 'lead':
+            lead\migrations\0002_lead_team.py
+                - Add field team to lead
+
+    python manage.py migrate
+
+Part 6 completed around 8:55 PM.
+Moving on to part 7 right now.
+
+    TODO List for Part 7:
+    - Only owner can add members
+    - Assign leads to a member
+        - Update lead model
+        - Update lead serializer
+        - Override update function
+        - Change the edit lead page
+    - Show assignee in leads list
+    - Show assignee on lead detail page
+
+    python manage.py makemigrations
+    python manage.py migrate
+
+Part 7 completed around 9:20 PM.
+Will continue onwards to Part 8 tomorrow.
+
+
+
+
+
+
+    TODO List for Part 8:
+    - Show list of clients
+        - Page for clients
+    - Make it possible to add clients
+        - Django app and model
+        - Serializer
+        - View
+        - Urls
+        - Vue page for creating clients
+        - Send information to server
+    - Show list of clients
+        - Get clients from server
+    - Detail view of a client
+        - Page for clients
+        - Get client from server
+    - Edit client
+        - Page for editing
+        - Get client from server
+        - Send updates to server
 
 
 
@@ -183,6 +245,104 @@ Sat. 05/07/22, ~3:10 PM | PC
 
 
 
+
+    TODO List for Part 9:
+    - Add notes to a client
+        - Database model
+        - Serializer
+        - Views
+        - Page for adding notes
+        - Send information to server
+    - Show notes on the detail page of a client
+    - Edit notes
+        - Page for editing notes
+        - Send update to server
+    - Change information about users
+        - Endpoint for getting information
+        - Add edit page for users
+
+
+
+
+    TODO List for Part 10:
+    - Show full name in the CRM
+        - Leads page
+        - Lead page
+        - Member page
+    - Converting a lead to a client
+        - Create view
+        - Add button for converting lead
+    - Create model for plans for the teams
+        - Add plans in the admin area
+        - Default plan is free
+
+
+
+
+    TODO List for Part 11:
+        This part is at the end of the playlist (2nd to last video. last video is all 16 parts combined so ignore)
+    - Add pagination to leads page
+    - Add pagination to clients page
+    - Search (leads)
+    - Search (clients)
+
+
+
+
+    TODO List for Part 12:
+    - Start implementing plan limitations
+    - Make it possible to subscribe to a plan
+
+
+
+
+    TODO List for Part 13:
+    - Install Stripe
+    - Start implementing stripe
+        - Create Stripe account
+        - Get API keys
+            - Insert into settings.py
+        - Create two products (small and big team)
+            - Insert into settings.py
+    - Make public key available in the plans page
+    - Initialize stripe (in the frontend)
+
+
+
+
+    TODO List for Part 14:
+    - Add new fields to database
+    - Download and install Stripe CLI
+        - https://stripe.com/docs/webhooks/test
+    - Finish Stripe implementation
+
+
+
+
+    TODO List for Part 15:
+    - Make it possible to cancel a plan
+    - Show plan end date in team page
+    - Make it possible to delete a lead
+    - Make it possible to delete a client
+    - Only show "leads, clients, and team" in menu when authenticated
+
+
+
+
+    TODO List for Part 16:
+    - Install necessary software on the server
+    - Create a Postgresql database
+    - Install virtualenv
+    - Create group and user for the project
+    - Create environment
+    - Get Django code from Git
+    - Copy the settings file and change it
+    - Install and set up Gunicorn
+    - Install and set up Supervisor
+    - Get SSL certificate
+    - Set up Nginx
+    - Build the Vue project locally and send to server
+    - Set up Nginx for the Vue project
 
 
 

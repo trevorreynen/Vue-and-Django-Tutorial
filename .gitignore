@@ -1,0 +1,33 @@
+
+.vscode
+.prettierrc
+*lnk
+
+tutorial_django/*.pyc
+tutorial_django/*/*.pyc
+tutorial_django/*/*/*.pyc
+tutorial_django/*/*/*/*.pyc
+
+tutorial_vue/.DS_Store
+tutorial_vue/node_modules
+/dist
+
+# local env files
+tutorial_vue/.env.local
+tutorial_vue/.env.*.local
+
+# Log files
+tutorial_vue/npm-debug.log*
+tutorial_vue/yarn-debug.log*
+tutorial_vue/yarn-error.log*
+tutorial_vue/pnpm-debug.log*
+
+# Editor directories and files
+tutorial_vue/.idea
+tutorial_vue/.vscode
+tutorial_vue/*.suo
+tutorial_vue/*.ntvs*
+tutorial_vue/*.njsproj
+tutorial_vue/*.sln
+tutorial_vue/*.sw?
+
