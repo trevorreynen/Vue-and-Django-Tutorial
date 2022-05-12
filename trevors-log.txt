@@ -245,15 +245,9 @@ Sun. 05/08/22, 12:20 PM | PC
             A slash followed by two consecutive asterisks then a slash matches zero or more directories. For example, "a/**/b" matches "a/b", "a/x/b", "a/x/y/b" and so on.
 
     Forgot to add to log, finished part 8 around 3:30 PM.
-    Going to start Part 9 in a few minutes.
 
 
-
-
-
-
-
-
+Wed. 05/11/22 at 6:00 PM | PC
 
     TODO List for Part 9:
     - Add notes to a client
@@ -270,8 +264,43 @@ Sun. 05/08/22, 12:20 PM | PC
         - Endpoint for getting information
         - Add edit page for users
 
+    python manage.py makemigrations
+    python manage.py migrate
+
+    python manage.py makemigrations
+        It is impossible to add the field 'created_at' with 'auto_now_add=True' to note without providing a default. This is because the database needs something to populate existing rows.
+
+        1) Provide a one-off default now which will be set on all existing rows
+        2) Quit and manually define a default value in models.py.
+        Select an option:
+        "1"
+        Please enter the default value as valid Python.
+        Accept the default 'timezone.now' by pressing 'Enter' or provide another value.
+        The datetime and django.utils.timezone modules are available, so it is possible to provide e.g. timezone.now as a value.
+        Type 'exit' to exit this prompt
+        [default: timezone.now] >>>
+        "timezone.now"
+        It is impossible to add a non-nullable field 'created_by' to note without specifying a default. This is because the database needs something to populate existing rows.
+        Please select a fix:
+        1) Provide a one-off default now (will be set on all existing rows with a null value for this column)
+        2) Quit and manually define a default value in models.py.
+        Select an option:
+        "1"
+        Please enter the default value as valid Python.
+        The datetime and django.utils.timezone modules are available, so it is possible to provide e.g. timezone.now as a value.
+        Type 'exit' to exit this prompt
+        >>>
+        "1"
+        Migrations for 'client':
+        client\migrations\0003_note_created_at_note_created_by_note_modified_at.py
+            - Add field created_at to note
+            - Add field created_by to note
+            - Add field modified_at to note
+    python manage.py migrate
 
 
+Finished Part 9 at 9:15 PM (took a break in between).
+Starting Part 10 now, 9:15 PM.
 
     TODO List for Part 10:
     - Show full name in the CRM
@@ -285,8 +314,11 @@ Sun. 05/08/22, 12:20 PM | PC
         - Add plans in the admin area
         - Default plan is free
 
+    python manage.py makemigrations
+    python manage.py migrate
 
-
+Finished Part 10 at 9:35 PM.
+Starting Part 11 now, 9:37 PM.
 
     TODO List for Part 11:
         This part is at the end of the playlist (2nd to last video. last video is all 16 parts combined so ignore)
@@ -294,6 +326,12 @@ Sun. 05/08/22, 12:20 PM | PC
     - Add pagination to clients page
     - Search (leads)
     - Search (clients)
+
+Finished Part 11 at 10:03 PM.
+Done for today, will continue hopefully tomorrow.
+
+
+
 
 
 
