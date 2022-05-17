@@ -1,7 +1,9 @@
 # Vue and Django Tutorial
-This GitHub repository was created for myself to learn the basics of Vue and Django. I am following one and only one guide during this tutorial: [Building a Simple CRM Using Django (DRF) And Vue](https://www.youtube.com/playlist?list=PLpyspNLjzwBl-u7Vh8mGfqqRKcVxHzqlp).
+This GitHub Repository is based on one and only one tutorial: [Building a Simple CRM Using Django (DRF) And Vue](https://www.youtube.com/playlist?list=PLpyspNLjzwBl-u7Vh8mGfqqRKcVxHzqlp).
 
-My goal, other than learning Vue and Django as well as gain more experience with GitHub and npm, is to take notes in some form so I can remember the process or at least refer back to something quicker in the future.
+This project was started mostly for myself to learn the basics of Vue and Django.
+
+I followed the tutorial linked above and made commits (usually) after each part/video was completed. Throughout the tutorial, I added personal notes to a file called "trevors-log.txt" which contains nearly everything I did including terminal commands. It's unorganized and probably not useful for anyone except myself. However, in case I need to reference something in the future, I have that file.
 
 ---
 
@@ -61,7 +63,6 @@ The directions below assume all prerequisites are met from Project Tools above. 
    (tutorial_env) .../GitHub/Vue-and-Django-Tutorial> python -m pip install -r requirements.txt
    ```
    **NOTE:** The (tutorial_env) to the left of the directory is how you know you are IN the virtual env. Any commands like pip will be working with the virtual env and not your Python environment, *as long as the virtual env, (tutorial_env), is active*.
-9. **Steps at and beyond this point will be updated later to cover everything.**
 
 ---
 
