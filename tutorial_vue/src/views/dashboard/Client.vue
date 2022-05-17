@@ -75,6 +75,7 @@
                         console.log(error)
                     })
 
+
                 await axios
                     .get(`/api/v1/notes/?client_id=${clientID}`)
                     .then((response) => {

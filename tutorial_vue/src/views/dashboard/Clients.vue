@@ -4,7 +4,9 @@
             <div class="column is-12">
                 <h1 class="title">Clients</h1>
 
-                <router-link to="/dashboard/clients/add">Add Client</router-link>
+                <router-link to="/dashboard/clients/add" v-if="$store.state.team.max_clients > num_clients">Add Client</router-link>
+
+                <div class="notification is-danger" v-else>You have reached the maximum clients. Please upgrade plan to add more!</div>
 
                 <hr />
 
@@ -72,7 +74,8 @@
                 showPreviousButton: false,
                 showNextButton: false,
                 currentPage: 1,
-                query: ''
+                query: '',
+                num_clients: 0
             }
         },
         mounted() {
@@ -92,6 +95,14 @@
 
                 this.showPreviousButton = false
                 this.showNextButton = false
+
+
+                await axios
+                    .get(`/api/v1/clients/`)
+                    .then((response) => {
+                        this.num_clients = response.data.count
+                    })
+
 
                 await axios
                     .get(`/api/v1/clients/?page=${this.currentPage}&search=${this.query}`)

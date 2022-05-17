@@ -128,7 +128,6 @@ Done with Part 4 at ~4:35 PM. Ran into a problem that differs from the Part 4 vi
         My problem was that after I clicked the details button for a lead in the leads table, the page wouldn't show up. The console noted something similar to "missing required param 'id'". After looking at the comments, one comment specifically by Essam AbdElHam mentioned having the same problem.
         The solution that worked for me was in a reply to the comment I just mentioned, saying "I tried to replace { id: lead.id } with  { lead: lead.id } and everything worked fine for me." I also did that, changing { id: lead.id } to { lead: lead.id } in Lead.vue and Leads.vue. That fixed the problem. I mention this here because as the person who noted the fix said, I also don't quite understand how this fixed the problem and if it's correct or not. So for future reference these two paragraphs are here just in case.
 
-
 Starting Part 5 at ~5:15 PM
     TODO List from Part 5 video:
     - Create Django app and model
@@ -247,6 +246,7 @@ Sun. 05/08/22, 12:20 PM | PC
     Forgot to add to log, finished part 8 around 3:30 PM.
 
 
+
 Wed. 05/11/22 at 6:00 PM | PC
 
     TODO List for Part 9:
@@ -332,18 +332,50 @@ Done for today, will continue hopefully tomorrow.
 
 
 
-
-
-
+Fri. 05/13, 4:27 AM | PC
 
     TODO List for Part 12:
     - Start implementing plan limitations
     - Make it possible to subscribe to a plan
 
 
+    I installed some things but may not use later on, so I want to take note of everything I typed
+        npm install bootstrap bootstrap-vue --save
+
+        npm install -g gulp
+        npm uninstall gulp
+
+        npm search vue
+        npm search bootstrap
+        npm search popper
+
+        npm uninstall bootstrap
+        npm install bootstrap@4.6.1
+
+        npm i @popperjs/core@1.16.1 (I got many errors. Probably didn't install properly, or at all, so:)
+        npm i @popperjs/core
+
+        npm search popper
+        npm search portal
+
+        npm install portal-vue (I got many errors. Probably didn't install properly, or at all.)
+
+        npm uninstall bootstrap bootstrap-vue @propperjs/core
 
 
-    TODO List for Part 13:
+Taking a break. Got distracted for like an hour. Currently 5:50 AM
+
+
+
+Tue. 05/17, 4:03 AM | PC
+    Not exactly sure where I left off. Might have been half way through part 12 or finished it or barely got far into part 12. Gonna just restart part 12's video.
+
+    Finished part 12 at 5:15 AM. I just repeated part 12 completely just in case.
+
+    !! IMPORTANT NOTE !!
+    Parts 13 and 14 involve something called "Stripe" which, after skimming through those two videos, seems to involve setting up the plans to actually work with payment. Since I don't need to do this right now and am not interested in creating an account to do that, I am skipping those two videos/parts for now.
+
+    TODO List for Part 13: !!** SKIPPED PART 13 **!!
     - Install Stripe
     - Start implementing stripe
         - Create Stripe account
@@ -354,10 +386,7 @@ Done for today, will continue hopefully tomorrow.
     - Make public key available in the plans page
     - Initialize stripe (in the frontend)
 
-
-
-
-    TODO List for Part 14:
+    TODO List for Part 14: !!** SKIPPED PART 14 **!!
     - Add new fields to database
     - Download and install Stripe CLI
         - https://stripe.com/docs/webhooks/test
@@ -365,6 +394,8 @@ Done for today, will continue hopefully tomorrow.
 
 
 
+Tue. 05/17, 5:20 AM | PC
+    Since I skipped Part 13 and 14 for now, I am moving on to Part 15. I will try to continue doing everything possible in this part, but it may not be possible to complete everything on the checklist since I skipped the two previous parts. Before I start this though, I am going to commit the previous Part 12 work so my VS Code doesn't show colors in the File Explorer section for modified and new files.
 
     TODO List for Part 15:
     - Make it possible to cancel a plan

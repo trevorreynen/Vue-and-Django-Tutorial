@@ -60,15 +60,14 @@
                     password: this.password
                 }
 
+
                 await axios
                     .post('/api/v1/token/login/', formData)
                     .then((response) => {
                         const token = response.data.auth_token
 
                         this.$store.commit('setToken', token)
-
                         axios.defaults.headers.common['Authorization'] = 'Token ' + token
-
                         localStorage.setItem('token', token)
                     })
                     .catch((error) => {
@@ -80,6 +79,7 @@
                             this.errors.push('Something went wrong. Please try again!')
                         }
                     })
+
 
                 await axios
                     .get('/api/v1/users/me')
@@ -93,10 +93,19 @@
                         console.log(error)
                     })
 
+
                 await axios
                     .get('/api/v1/teams/get_my_team')
                     .then((response) => {
-                        this.$store.commit('setTeam', { id: response.data.id, name: response.data.name })
+                        console.log(response.data)
+
+                        this.$store.commit('setTeam', {
+                            id: response.data.id,
+                            name: response.data.name,
+                            plan: response.data.plan.name,
+                            max_leads: response.data.plan.max_leads,
+                            max_clients: response.data.plan.max_clients
+                        })
 
                         this.$router.push('/dashboard/my-account')
                     })

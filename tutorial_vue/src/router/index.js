@@ -21,6 +21,8 @@ import EditClient from '../views/dashboard/EditClient.vue'
 import AddNote from '../views/dashboard/AddNote.vue'
 import EditNote from '../views/dashboard/EditNote.vue'
 import EditMember from '../views/dashboard/EditMember.vue'
+import Plans from '../views/dashboard/Plans.vue'
+import PlansThankYou from '../views/dashboard/PlansThankYou.vue'
 
 const routes = [
     {
@@ -71,9 +73,17 @@ const routes = [
         }
     },
     {
-        path: '/dashboard/team/add-member',
-        name: 'AddMember',
-        component: AddMember,
+        path: '/dashboard/plans',
+        name: 'Plans',
+        component: Plans,
+        meta: {
+            requireLogin: true
+        }
+    },
+    {
+        path: '/dashboard/plans/thankyou',
+        name: 'PlansThankYou',
+        component: PlansThankYou,
         meta: {
             requireLogin: true
         }
@@ -82,6 +92,14 @@ const routes = [
         path: '/dashboard/edit-member/:id',
         name: 'EditMember',
         component: EditMember,
+        meta: {
+            requireLogin: true
+        }
+    },
+    {
+        path: '/dashboard/team/add-member',
+        name: 'AddMember',
+        component: AddMember,
         meta: {
             requireLogin: true
         }

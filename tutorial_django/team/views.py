@@ -4,7 +4,7 @@ from rest_framework import viewsets, status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from .models import Team
+from .models import Team, Plan
 from .serializers import TeamSerializer, UserSerializer
 
 
@@ -52,6 +52,28 @@ class UserDetail(APIView):
 @api_view(['GET'])
 def get_my_team(request):
     team = Team.objects.filter(members__in=[request.user]).first()
+    serializer = TeamSerializer(team)
+
+    return Response(serializer.data)
+
+
+@api_view(['POST'])
+def upgrade_plan(request):
+    team = Team.objects.filter(members__in=[request.user]).first()
+    plan = request.data['plan']
+
+    print('Plan', plan)
+
+    if plan == 'free':
+        plan = Plan.objects.get(name='Free')
+    elif plan == 'smallteam':
+        plan = Plan.objects.get(name='Small Team')
+    elif plan == 'bigteam':
+        plan = Plan.objects.get(name='Big Team')
+
+    team.plan = plan
+    team.save()
+
     serializer = TeamSerializer(team)
 
     return Response(serializer.data)
