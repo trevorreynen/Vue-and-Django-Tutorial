@@ -394,7 +394,7 @@ Tue. 05/17, 4:03 AM | PC
 
 
 
-Tue. 05/17, 5:20 AM | PC
+Tue. 05/17, 5:25 AM | PC
     Since I skipped Part 13 and 14 for now, I am moving on to Part 15. I will try to continue doing everything possible in this part, but it may not be possible to complete everything on the checklist since I skipped the two previous parts. Before I start this though, I am going to commit the previous Part 12 work so my VS Code doesn't show colors in the File Explorer section for modified and new files.
 
     TODO List for Part 15:
@@ -404,10 +404,15 @@ Tue. 05/17, 5:20 AM | PC
     - Make it possible to delete a client
     - Only show "leads, clients, and team" in menu when authenticated
 
+    !! IMPORTANT NOTE !!
+    - While I was able to complete the first bullet in the TODO list, it doesn't actually work. There are also errors in the "team > views.py" but again, that's because I didn't complete Parts 13 and 14. Everything still runs as expected without errors, until you click the "Cancel Plan" button. Then, errors galore.
+    - Can't do bullet #2 in TODO list at all. It requires getting the end date from Stripe in the first place. So trying to add it won't do anything so I am skipping that bullet point.
+    - Deleting the lead starts at 9:30 in video.
+
+Finished Part 15 at 5:58 AM.
 
 
-
-    TODO List for Part 16:
+    TODO List for Part 16: !!** SKIPPED PART 16 **!!
     - Install necessary software on the server
     - Create a Postgresql database
     - Install virtualenv
@@ -423,7 +428,5 @@ Tue. 05/17, 5:20 AM | PC
     - Set up Nginx for the Vue project
 
 
-
-
-
+This project for now is complete. I skipped Parts 13, 14, and 16 of the tutorial, at least for now. Maybe I will come back in the future to finish those parts, but I want to start and finish a few more projects for GitHub and my resume before my break is over.
 

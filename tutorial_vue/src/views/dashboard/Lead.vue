@@ -7,6 +7,7 @@
                 <div class="buttons">
                     <router-link :to="{ name: 'EditLead', params: { lead: lead.id } }" class="button is-light">Edit</router-link>
                     <button @click="convertToClient" class="button is-info">Convert to Client</button>
+                    <button @click="deleteLead" class="button is-danger">Delete Lead</button>
                 </div>
             </div>
 
@@ -52,6 +53,24 @@
             this.getLead()
         },
         methods: {
+            async deleteLead() {
+                this.$store.commit('setIsLoading', true)
+
+                const leadID = this.$route.params.id
+
+                await axios
+                    .post(`/api/v1/leads/delete_lead/${leadID}/`)
+                    .then((response) => {
+                        console.log(response.data)
+
+                        this.$router.push('/dashboard/leads')
+                    })
+                    .catch((error) => {
+                        console.log(error)
+                    })
+
+                this.$store.commit('setIsLoading', false)
+            },
             async getLead() {
                 this.$store.commit('setIsLoading', true)
 
