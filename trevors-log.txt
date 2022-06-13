@@ -18,7 +18,7 @@ Thu. 04/21/22, ~8:00-9:00 AM | Laptop
     npm install -g @vue/cli
     npm install -g npm@8.7.0
     vue create tutorial_vue
-    !!!! NOTE: This are the selections made when creating vue. This section stops after next the "!!!!"
+    !!!! NOTE: These are the selections made when creating the Vue app. This section stops after next the "!!!!"
         1. Manually select features
         2. Babel
         2. Router
@@ -35,7 +35,7 @@ Thu. 04/21/22, ~8:00-9:00 AM | Laptop
     npm install bulma-toast
     npm install axios
 
-    !!!! NOTE: Next commands done after 8:10 in Part 1 video. !!!!
+    !!!! NOTE: Next commands were done after 8:10 in Part 1 video. !!!!
 
     npm run serve
 
@@ -63,7 +63,7 @@ Thu. 04/21/22, ~3:00 PM | PC
     pip install djoser
     django-admin startproject tutorial_django
 
-Taking a break. Will continue later. Stopped at 2.55 of Part 2 video.
+    Taking a break. Will continue later. Stopped at 2.55 of Part 2 video.
 
 
 
